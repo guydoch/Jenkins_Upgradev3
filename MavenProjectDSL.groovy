@@ -9,7 +9,6 @@ job('First-Maven-Project-Via-DSL') {
     steps {
 
          maven{
-            mavenInstallation(' c:\\maven\\apache-maven-3.8.2')
             maven('clean package', 'maven-samples\\single-module\\pom.xml')
 
         }
