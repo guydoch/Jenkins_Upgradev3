@@ -7,10 +7,12 @@ job('First-Maven-Project-Via-DSL') {
         scm('* * * * *')
     }
     steps {
-        maven{
+
+         maven{
             mavenInstallation(' c:\\maven\\apache-maven-3.8.2')
+            maven('clean package', 'maven-samples\\single-module\\pom.xml')
+
         }
-        maven('clean package', 'maven-samples\\single-module\\pom.xml')
     }
     publishers {
         //archive the war file generated
