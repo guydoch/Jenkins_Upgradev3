@@ -4,7 +4,7 @@ pipeline {
         stage('Build Application') {
             steps {
                 echo "build maven...."
-                mvn -f java-tomcat-sample\\pom.xml clean package
+                bat 'C:/scripts/mvn.bat'
             }
             post {
                 success {
