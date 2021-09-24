@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Build Application') {
             steps {
-                echo "build maven...."
-                bat 'C:/scripts/mvn.bat'
+                echo "build maven....."
+                bat 'mvn clean package'
             }
             post {
                 success {
